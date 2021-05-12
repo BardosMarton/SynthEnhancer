@@ -14,6 +14,8 @@ namespace PianoEnhancer
     {
         Timer ticker = new Timer();
 
+        Timer beatflash = new Timer();
+
         private List<int> recording = new List<int>();
 
         private List<int> major = new List<int>() { 0, 2, 4, 5, 7, 9, 11 };
@@ -25,6 +27,56 @@ namespace PianoEnhancer
         private List<int> allowedKeys;
 
         private bool enhance = false;
+
+
+
+        System.Windows.Media.MediaPlayer c1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer cs1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer d1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer ds1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer e1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer f1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer fs1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer g1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer gs1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer a1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer as1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer b1p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer c2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer cs2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer d2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer ds2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer e2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer f2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer fs2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer g2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer gs2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer a2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer as2p = new System.Windows.Media.MediaPlayer();
+
+        System.Windows.Media.MediaPlayer b2p = new System.Windows.Media.MediaPlayer();
 
         private void NotesToDict()
         {
@@ -60,10 +112,15 @@ namespace PianoEnhancer
             NotesToDict();
             ticker.Interval = 1000;
             ticker.Tick += TickEvent;
-            ticker.Start();
             BPMbox.Text = "60";
+
+            beatflash.Interval = 60000 / (bpm * 4);
+            beatflash.Tick += FlashTick;
+            beatflash.Start();
+            ticker.Start();
         }
 
+        
 
         private void SelectedKey(int stepup)
         {
@@ -352,7 +409,6 @@ namespace PianoEnhancer
 
         private void C1_Click(object sender, EventArgs e)
         {
-            var c1p = new System.Windows.Media.MediaPlayer();
             c1p.Open(new System.Uri(@"c1.wav", UriKind.Relative));
             c1p.Play();
 
@@ -366,7 +422,6 @@ namespace PianoEnhancer
 
         private void Cs1_Click(object sender, EventArgs e)
         {
-            var cs1p = new System.Windows.Media.MediaPlayer();
             cs1p.Open(new System.Uri(@"cs1.wav", UriKind.Relative));
             cs1p.Play();
 
@@ -380,7 +435,6 @@ namespace PianoEnhancer
 
         private void D1_Click(object sender, EventArgs e)
         {
-            var d1p = new System.Windows.Media.MediaPlayer();
             d1p.Open(new System.Uri(@"d1.wav", UriKind.Relative));
             d1p.Play();
 
@@ -394,7 +448,6 @@ namespace PianoEnhancer
 
         private void Ds1_Click(object sender, EventArgs e)
         {
-            var ds1p = new System.Windows.Media.MediaPlayer();
             ds1p.Open(new System.Uri(@"ds1.wav", UriKind.Relative));
             ds1p.Play();
 
@@ -408,7 +461,6 @@ namespace PianoEnhancer
 
         private void E1_Click(object sender, EventArgs e)
         {
-            var e1p = new System.Windows.Media.MediaPlayer();
             e1p.Open(new System.Uri(@"e1.wav", UriKind.Relative));
             e1p.Play();
 
@@ -422,7 +474,6 @@ namespace PianoEnhancer
 
         private void F1_Click(object sender, EventArgs e)
         {
-            var f1p = new System.Windows.Media.MediaPlayer();
             f1p.Open(new System.Uri(@"f1.wav", UriKind.Relative));
             f1p.Play();
 
@@ -436,7 +487,6 @@ namespace PianoEnhancer
 
         private void Fs1_Click(object sender, EventArgs e)
         {
-            var fs1p = new System.Windows.Media.MediaPlayer();
             fs1p.Open(new System.Uri(@"fs1.wav", UriKind.Relative));
             fs1p.Play();
 
@@ -450,7 +500,6 @@ namespace PianoEnhancer
 
         private void G1_Click(object sender, EventArgs e)
         {
-            var g1p = new System.Windows.Media.MediaPlayer();
             g1p.Open(new System.Uri(@"g1.wav", UriKind.Relative));
             g1p.Play();
 
@@ -464,7 +513,6 @@ namespace PianoEnhancer
 
         private void Gs1_Click(object sender, EventArgs e)
         {
-            var gs1p = new System.Windows.Media.MediaPlayer();
             gs1p.Open(new System.Uri(@"gs1.wav", UriKind.Relative));
             gs1p.Play();
 
@@ -478,7 +526,6 @@ namespace PianoEnhancer
 
         private void A1_Click(object sender, EventArgs e)
         {
-            var a1p = new System.Windows.Media.MediaPlayer();
             a1p.Open(new System.Uri(@"a1.wav", UriKind.Relative));
             a1p.Play();
 
@@ -492,7 +539,6 @@ namespace PianoEnhancer
 
         private void As1_Click(object sender, EventArgs e)
         {
-            var as1p = new System.Windows.Media.MediaPlayer();
             as1p.Open(new System.Uri(@"as1.wav", UriKind.Relative));
             as1p.Play();
 
@@ -506,7 +552,6 @@ namespace PianoEnhancer
 
         private void B1_Click(object sender, EventArgs e)
         {
-            var b1p = new System.Windows.Media.MediaPlayer();
             b1p.Open(new System.Uri(@"b1.wav", UriKind.Relative));
             b1p.Play();
 
@@ -520,7 +565,6 @@ namespace PianoEnhancer
 
         private void C2_Click(object sender, EventArgs e)
         {
-            var c2p = new System.Windows.Media.MediaPlayer();
             c2p.Open(new System.Uri(@"c2.wav", UriKind.Relative));
             c2p.Play();
 
@@ -534,7 +578,6 @@ namespace PianoEnhancer
 
         private void Cs2_Click(object sender, EventArgs e)
         {
-            var cs2p = new System.Windows.Media.MediaPlayer();
             cs2p.Open(new System.Uri(@"cs2.wav", UriKind.Relative));
             cs2p.Play();
 
@@ -548,7 +591,6 @@ namespace PianoEnhancer
 
         private void D2_Click(object sender, EventArgs e)
         {
-            var d2p = new System.Windows.Media.MediaPlayer();
             d2p.Open(new System.Uri(@"d2.wav", UriKind.Relative));
             d2p.Play();
 
@@ -562,7 +604,6 @@ namespace PianoEnhancer
 
         private void Ds2_Click(object sender, EventArgs e)
         {
-            var ds2p = new System.Windows.Media.MediaPlayer();
             ds2p.Open(new System.Uri(@"ds2.wav", UriKind.Relative));
             ds2p.Play();
 
@@ -576,7 +617,6 @@ namespace PianoEnhancer
 
         private void E2_Click(object sender, EventArgs e)
         {
-            var e2p = new System.Windows.Media.MediaPlayer();
             e2p.Open(new System.Uri(@"e2.wav", UriKind.Relative));
             e2p.Play();
 
@@ -590,7 +630,6 @@ namespace PianoEnhancer
 
         private void F2_Click(object sender, EventArgs e)
         {
-            var f2p = new System.Windows.Media.MediaPlayer();
             f2p.Open(new System.Uri(@"f2.wav", UriKind.Relative));
             f2p.Play();
 
@@ -604,7 +643,6 @@ namespace PianoEnhancer
 
         private void Fs2_Click(object sender, EventArgs e)
         {
-            var fs2p = new System.Windows.Media.MediaPlayer();
             fs2p.Open(new System.Uri(@"fs2.wav", UriKind.Relative));
             fs2p.Play();
 
@@ -618,7 +656,6 @@ namespace PianoEnhancer
 
         private void G2_Click(object sender, EventArgs e)
         {
-            var g2p = new System.Windows.Media.MediaPlayer();
             g2p.Open(new System.Uri(@"g2.wav", UriKind.Relative));
             g2p.Play();
 
@@ -632,7 +669,6 @@ namespace PianoEnhancer
 
         private void Gs2_Click(object sender, EventArgs e)
         {
-            var gs2p = new System.Windows.Media.MediaPlayer();
             gs2p.Open(new System.Uri(@"gs2.wav", UriKind.Relative));
             gs2p.Play();
 
@@ -646,7 +682,6 @@ namespace PianoEnhancer
 
         private void A2_Click(object sender, EventArgs e)
         {
-            var a2p = new System.Windows.Media.MediaPlayer();
             a2p.Open(new System.Uri(@"a2.wav", UriKind.Relative));
             a2p.Play();
 
@@ -660,7 +695,6 @@ namespace PianoEnhancer
 
         private void As2_Click(object sender, EventArgs e)
         {
-            var as2p = new System.Windows.Media.MediaPlayer();
             as2p.Open(new System.Uri(@"as2.wav", UriKind.Relative));
             as2p.Play();
 
@@ -674,7 +708,6 @@ namespace PianoEnhancer
 
         private void B2_Click(object sender, EventArgs e)
         {
-            var b2p = new System.Windows.Media.MediaPlayer();
             b2p.Open(new System.Uri(@"b2.wav", UriKind.Relative));
             b2p.Play();
 
@@ -850,7 +883,6 @@ namespace PianoEnhancer
                     GoodKey();
                     t++;
                 }
-
             }
             if (playRadioButton.Checked == true && t >= recording.Count)
             {
@@ -869,7 +901,10 @@ namespace PianoEnhancer
             //disable enhance button
 
             else if (playRadioButton.Checked == false)
+            {
                 checkEnhance.Enabled = true;
+                BeatBox.Visible = false;
+            }
             //enable
         }
 
@@ -893,6 +928,7 @@ namespace PianoEnhancer
             {
                 bpm = 60;
                 BPMbox.Text = "60";
+                ticker.Interval = 1000;
             }
 
             if (bpm > 0 && bpm < 601)
@@ -905,6 +941,7 @@ namespace PianoEnhancer
         {
             if (bpm < 1 || bpm > 600)
             {
+                bpm = 60;
                 BPMbox.Text = "60";
                 ticker.Interval = 1000;
             }
@@ -940,6 +977,41 @@ namespace PianoEnhancer
         {
             Image background = new Bitmap(@"FormWallpaper.png");
             this.BackgroundImage = background;
+
+            BeatBox.BackColor = Color.FromArgb(0x304F004F);
+
+            BeatBox.Visible = false;
+        }
+
+        int tickcount = 0;
+
+        private void FlashTick(object sender, EventArgs e)
+        {
+            if (playRadioButton.Checked == true)
+            {
+                beatflash.Interval = 60000 / (bpm * 4);
+
+                if (tickcount == 0 || tickcount == 2)
+                {
+                    BeatBox.BackColor = Color.FromArgb(0x304F004F);
+
+                    BeatBox.Visible = true;
+
+                    tickcount += 1;
+                }
+                else if (tickcount == 1)
+                {
+                    BeatBox.BackColor = Color.FromArgb(0x504F004F);
+
+                    tickcount += 1;
+                }
+                else
+                {
+                    BeatBox.Visible = false;
+
+                    tickcount = 0;
+                }
+            }
         }
     }
 }

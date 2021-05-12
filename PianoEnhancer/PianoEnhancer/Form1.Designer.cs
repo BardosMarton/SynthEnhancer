@@ -78,6 +78,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.checkEnhance = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.BeatBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BeatBox)).BeginInit();
             this.SuspendLayout();
             // 
             // c1
@@ -772,6 +774,15 @@
             this.label11.TabIndex = 66;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BeatBox
+            // 
+            this.BeatBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BeatBox.Location = new System.Drawing.Point(-1, 223);
+            this.BeatBox.Name = "BeatBox";
+            this.BeatBox.Size = new System.Drawing.Size(637, 322);
+            this.BeatBox.TabIndex = 67;
+            this.BeatBox.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -829,6 +840,7 @@
             this.Controls.Add(this.d1);
             this.Controls.Add(this.c1);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.BeatBox);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -836,6 +848,7 @@
             this.MinimumSize = new System.Drawing.Size(640, 575);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.BeatBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -892,6 +905,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox checkEnhance;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox BeatBox;
     }
 }
 

@@ -18,3 +18,13 @@ C:\Users\bardm\Desktop\PianoEnhancer\PianoEnhancer\PianoEnhancer\bin\Debug\Piano
 C:\Users\bardm\Desktop\PianoEnhancer\PianoEnhancer\PianoEnhancer\bin\Debug\PianoEnhancer.pdb
 C:\Users\bardm\Desktop\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.Properties.Resources.resources
 C:\Users\bardm\Desktop\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.csproj.CoreCompileInputs.cache
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\bin\Debug\PianoEnhancer.exe.config
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\bin\Debug\PianoEnhancer.exe
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\bin\Debug\PianoEnhancer.pdb
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.csprojAssemblyReference.cache
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.Form1.resources
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.Properties.Resources.resources
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.csproj.GenerateResource.cache
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.csproj.CoreCompileInputs.cache
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.exe
+D:\Iskola\Informatika\Piano Enhancer\PianoEnhancer\PianoEnhancer\PianoEnhancer\obj\Debug\PianoEnhancer.pdb
